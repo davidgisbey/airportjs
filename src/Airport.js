@@ -1,5 +1,4 @@
 function Airport() {
-   hangar: []
-
 
 }
+Airport.prototype.hangar = function() { return []; };
