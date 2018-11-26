@@ -1,4 +1,4 @@
-describe("Aiport", function() {
+describe("Airport", function() {
 
   var airport;
   var plane;
@@ -10,7 +10,7 @@ describe("Aiport", function() {
 
   describe("Hangar", function() {
     it("Has an empty hangar to start with", function() {
-      expect(airport.hangar()).toEqual([]);
+      expect(airport.hangar).toEqual([]);
     });
   });
 });
