@@ -1,3 +1,5 @@
+'use strict';
+
 describe("Airport", function() {
 
   var airport;
@@ -32,5 +34,10 @@ describe("Airport", function() {
       spyOn(airport, 'isStormy').and.returnValue(true);
       expect(function(){ airport.clearForTakeOff(plane); }).toThrowError('cannot takeoff during the storm');
     });
+
+    it('does not clear planes to land', function() {
+      spyOn(airport, 'isStormy').and.returnValue(true);
+      expect(function(){ airport.clearForLanding(plane); }).toThrowError('cannot land during the storm');
+    })
   });
 });

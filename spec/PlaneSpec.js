@@ -1,3 +1,5 @@
+'use strict';
+
 describe("Plane", function() {
   var plane;
   var airport;
@@ -10,7 +12,7 @@ describe("Plane", function() {
 
   describe("Landing", function() {
     it("plane can land", function() {
-      plane.land(airport)
+      plane.land(airport);
       expect(airport.clearForLanding).toHaveBeenCalledWith(plane);
     });
   });
